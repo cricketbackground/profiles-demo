@@ -12,12 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class HelloController {
 
-    private final PostgresDatasource myDatabaseProperties;
+    private final PostgresDatasource postgresDatasource;
+
+    private final OracleDatasource oracleDatasource;
 
     @GetMapping
     public ResponseEntity<ApiResponse> hello() {
         ApiResponse apiResponse = ApiResponse.builder().build();
-        BeanUtils.copyProperties(myDatabaseProperties, apiResponse);
+        BeanUtils.copyProperties(postgresDatasource, apiResponse);
+        BeanUtils.copyProperties(oracleDatasource, apiResponse);
         return ResponseEntity.ok(apiResponse);
     }
 

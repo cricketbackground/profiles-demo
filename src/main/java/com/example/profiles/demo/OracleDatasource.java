@@ -5,11 +5,11 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ConfigurationProperties("postgres-database")
+@ConfigurationProperties("oracle-database")
 @Data
-public class PostgresDatasource {
+public class OracleDatasource {
 
-    private String postgresDbUrl;
+    private String oracleDbUrl;
 
-    private String postgresDbDriver;
+    private String oracleDbDriver;
 }

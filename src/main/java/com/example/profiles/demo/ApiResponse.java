@@ -11,7 +11,11 @@ import lombok.experimental.SuperBuilder;
 @RequiredArgsConstructor
 public class ApiResponse {
 
-    private String dbUrl;
+    private String postgresDbUrl;
 
-    private String dbDriver;
+    private String postgresDbDriver;
+
+    private String oracleDbUrl;
+
+    private String oracleDbDriver;
 }

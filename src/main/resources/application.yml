@@ -5,10 +5,19 @@ server:
 spring:
   config:
     activate:
+      on-profile: oracle
+oracle-database:
+  oracle-db-url: "jdbc://oracle"
+  oracle-db-driver: "com.example.OracleDriver"
+
+---
+spring:
+  config:
+    activate:
       on-profile: postgres
 postgres-database:
-  db-url: "jdbc://postgres"
-  db-driver: "com.example.PostgresDriver"
+  postgres-db-url: "jdbc://postgres"
+  postgres-db-driver: "com.example.PostgresDriver"
 
 ---
 spring:
@@ -16,5 +25,11 @@ spring:
     group:
       dev: postgres
 postgres-database:
-  db-url: "jdbc://postgres/overridden"
-  db-driver: "com.example.extended.PostgresDriver"
+  postgres-db-url: "jdbc://postgres/overridden"
+  postgres-db-driver: "com.example.extended.PostgresDriver"
+
+---
+spring:
+  profiles:
+    group:
+      uat: oracle

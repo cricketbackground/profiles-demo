@@ -44,5 +44,5 @@ tasks.named('test') {
 }
 
 bootRun {
-    systemProperty "spring.profiles.active", "postgres"
+    systemProperty "spring.profiles.active", "uat"
 }
