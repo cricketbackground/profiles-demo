@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+---
+spring:
+  config:
+    activate:
+      on-profile: postgres
+postgres-database:
+  db-url: "jdbc://postgres"
+  db-driver: "com.example.PostgresDriver"
+
+---
+spring:
+  profiles:
+    group:
+      dev: postgres
+postgres-database:
+  db-url: "jdbc://postgres/overridden"
+  db-driver: "com.example.extended.PostgresDriver"
