@@ -1,6 +1,13 @@
 server:
   port: 8080
 
+oracle-database:
+  oracle-db-url: "dummy"
+  oracle-db-driver: "dummy"
+postgres-database:
+  postgres-db-url: "dummy"
+  postgres-db-driver: "dummy"
+
 ---
 spring:
   config:
