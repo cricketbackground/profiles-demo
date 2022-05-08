@@ -1,7 +1,8 @@
 spring:
   profiles:
     group:
-      dev: postgres
+      dev:
+        - postgres
 postgres-database:
   postgres-db-url: "jdbc://postgres/overridden"
   postgres-db-driver: "com.example.extended.PostgresDriver"
