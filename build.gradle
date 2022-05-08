@@ -44,5 +44,6 @@ tasks.named('test') {
 }
 
 bootRun {
+    // Set active profile for local testing here
     systemProperty "spring.profiles.active", "dev"
 }
