@@ -1,0 +1,3 @@
+postgres-database:
+  postgres-db-url: "jdbc://postgres"
+  postgres-db-driver: "com.example.PostgresDriver"

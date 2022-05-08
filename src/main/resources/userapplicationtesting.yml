@@ -1,0 +1,7 @@
+spring:
+  profiles:
+    group:
+      uat: oracle
+oracle-database:
+  oracle-db-url: "jdbc://oracle/overridden"
+  oracle-db-driver: "com.example.extended.OracleDriver"

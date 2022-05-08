@@ -4,32 +4,12 @@ server:
 ---
 spring:
   config:
+    import: development.yml
     activate:
-      on-profile: oracle
-oracle-database:
-  oracle-db-url: "jdbc://oracle"
-  oracle-db-driver: "com.example.OracleDriver"
-
+      on-profile: dev
 ---
 spring:
   config:
+    import: userapplicationtesting.yml
     activate:
-      on-profile: postgres
-postgres-database:
-  postgres-db-url: "jdbc://postgres"
-  postgres-db-driver: "com.example.PostgresDriver"
-
----
-spring:
-  profiles:
-    group:
-      dev: postgres
-postgres-database:
-  postgres-db-url: "jdbc://postgres/overridden"
-  postgres-db-driver: "com.example.extended.PostgresDriver"
-
----
-spring:
-  profiles:
-    group:
-      uat: oracle
+      on-profile: uat
